@@ -42,4 +42,8 @@ export default class BasePage {
     async fillInputField(inputField: By, text: string) {
         await (await this.findElement(inputField)).sendKeys(text);
     }
+
+    async waitAndFillInput(inputField: By, text: string, timeout) {
+        await (await this.driver.wait(until.elementLocated(inputField), timeout)).sendKeys(text);
+    }
 }
