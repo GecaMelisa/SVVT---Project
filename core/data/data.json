@@ -5,5 +5,13 @@
     "user_data": {
         "email": "tarik.maljanovic@stu.ibu.edu.ba",
         "password": "password12345"
+    },
+    "new_user_data": {
+        "email": "rined52957@visignal.com",
+        "password": "password12345",
+        "username": "svvtTest1_1645"
+    },
+    "search_data": {
+        "product": "iphone"
     }
 }

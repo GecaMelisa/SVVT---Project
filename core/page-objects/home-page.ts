@@ -7,9 +7,10 @@ const dataFilePath = path.resolve(__dirname, "../data/data.json");
 const testData = JSON.parse(readFileSync(dataFilePath, "utf8"));
 
 export class HomePage extends BasePage {
-    protected regButton = By.className('font-semibold');
+    protected regButton = By.xpath('//div[@class="sm:hidden flex flex-row items-center"]/a[2]');
     protected loginButton = By.className('font-semibold mr-md pr-md border-gray-300 border-r');
     protected agreeButton = By.className(' css-1sjubqu');
+    protected searchBar = By.name('notASearchField');
 
     async clickRegButton() {
         await this.findElementAndClick(this.regButton);
@@ -21,5 +22,10 @@ export class HomePage extends BasePage {
 
     async agree() {
         await this.findElementAndClick(this.agreeButton);
+    }
+
+    async searchForProduct() {
+        await this.fillInputField(this.searchBar, testData.search_data.product);
+        await this.driver.actions().keyDown('\uE007').sendKeys().perform();
     }
 }

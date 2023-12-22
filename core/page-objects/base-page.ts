@@ -46,4 +46,9 @@ export default class BasePage {
     async waitAndFillInput(inputField: By, text: string, timeout) {
         await (await this.driver.wait(until.elementLocated(inputField), timeout)).sendKeys(text);
     }
+
+    async scrollToElement(element: By) {
+        const actions = this.driver.actions({ bridge: true });
+        await actions.move({origin: element}).perform();
+    }
 }
