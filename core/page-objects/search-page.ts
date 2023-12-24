@@ -15,7 +15,7 @@ export class SearchPage extends BasePage {
 
     async checkProductName() {
         const title = (await this.waitForElement(this.firstProductTitle, 10000)).getText();
-        expect((await title).includes(testData.search_data.product) || (await title).includes((testData.search_data.product).toUpperCase() || (await title).includes('iPhone'))).toBeTruthy();
+        expect((await title).includes(testData.search_data.product) || (await title).includes((testData.search_data.product).toUpperCase()) || (await title).includes((testData.search_data.product).toLowerCase()) || (await title).includes('iPhone')).toBeTruthy();
     }
 
 
