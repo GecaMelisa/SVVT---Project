@@ -34,5 +34,9 @@
     "chating_data": {
         "message": "Hello"
 
+    },
+
+    "question_data":{
+        "question": "Dobar laptop"
     }
 }

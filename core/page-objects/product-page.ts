@@ -24,7 +24,7 @@ export class ProductPage extends BasePage {
     }
 
     async enterQuestion() {
-        this.waitAndFillInput(this.askQuestion, "Dobar laptop", 100000)
+        this.waitAndFillInput(this.askQuestion, testData.question_data.question, 100000)
     }
 
     async clickOrder() {
