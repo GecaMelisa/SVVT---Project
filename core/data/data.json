@@ -6,7 +6,7 @@
     },
     "user_data": {
         "email": "tarikmaljanovic123@gmail.com",
-        "password": "ockwinOpsw1"
+        "password": "password12345"
     },
     "new_user_data": {
         "email": "rined52957@visignal.com",
@@ -22,5 +22,11 @@
         "phone_number": "061 234 567",
         "town": "Sarajevo",
         "zip": "71000"
+    },
+    "publish_product": {
+        "product_name": " 17",
+        "price": "1000",
+        "cpu": "3460",
+        "os_version": "17"
     }
 }
