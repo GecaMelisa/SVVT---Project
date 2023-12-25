@@ -54,11 +54,13 @@ export class RegistrationPage extends BasePage {
         await select.selectByValue('80');
     }
 
-    async checkTermsAndConditions() {   
-        await this.findElementAndClick(this.termsAndConditions);
+    async checkTermsAndConditions() {
+        const element = await this.waitForElement(this.termsAndConditions, 10000)   
+        await this.scriptClick(element)
     }
 
     async registerUser() {
-        await this.findElementAndClick(this.regButton);
+        const element = await this.waitForElement(this.regButton, 10000)
+        await this.scriptClick(element)
     }
  }

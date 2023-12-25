@@ -47,8 +47,7 @@ export default class BasePage {
         await (await this.driver.wait(until.elementLocated(inputField), timeout)).sendKeys(text);
     }
 
-    async scrollToElement(element: By) {
-        const actions = this.driver.actions({ bridge: true });
-        await actions.move({origin: element}).perform();
+    async scriptClick(element: WebElement) {
+        await this.driver.executeScript('arguments[0].click();', element);
     }
 }

@@ -1,10 +1,12 @@
 {
     "url": {
-        "home_page": "https://olx.ba/"
+        "home_page": "https://olx.ba/",
+        "product_url": "https://olx.ba/artikal/35624597?recommendation_source=homepage",
+        "product_page": "https://olx.ba/artikal/50873678"
     },
     "user_data": {
-        "email": "tarik.maljanovic@stu.ibu.edu.ba",
-        "password": "password12345"
+        "email": "tarikmaljanovic123@gmail.com",
+        "password": "ockwinOpsw1"
     },
     "new_user_data": {
         "email": "rined52957@visignal.com",
@@ -13,5 +15,12 @@
     },
     "search_data": {
         "product": "iphone"
+    },
+    "order_data": {
+        "full_name": "Tarik Maljanovic",
+        "address": "Address 1",
+        "phone_number": "061 234 567",
+        "town": "Sarajevo",
+        "zip": "71000"
     }
 }
