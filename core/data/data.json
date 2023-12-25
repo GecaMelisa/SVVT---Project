@@ -2,7 +2,8 @@
     "url": {
         "home_page": "https://olx.ba/",
         "product_url": "https://olx.ba/artikal/35624597?recommendation_source=homepage",
-        "product_page": "https://olx.ba/artikal/50873678"
+        "product_page": "https://olx.ba/artikal/50873678",
+        "message_page": "https://olx.ba/artikal/57692095"
     },
     "user_data": {
         "email": "tarikmaljanovic123@gmail.com",
@@ -28,5 +29,10 @@
         "price": "1000",
         "cpu": "3460",
         "os_version": "17"
+    },
+
+    "chating_data": {
+        "message": "Hello"
+
     }
 }

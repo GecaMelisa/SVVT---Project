@@ -16,7 +16,8 @@ export class ProductPage extends BasePage {
     private zipField = By.xpath('//div[@class="flex flex-col"]/div[7]/div[1]/div[1]/div[1]/input');
     private checkbox = By.xpath('//label[@class="flex flex-row items-center justify-start mt-2"][3]/input');
     private nextButton = By.xpath('//div[@class="modal-container"]/div[4]/button');
-    protected askQuestion = By.name('addQuestion');
+    private askQuestion = By.name('addQuestion');
+
 
     constructor(driver: WebDriver) {
         super(driver);
