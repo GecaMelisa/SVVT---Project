@@ -16,6 +16,8 @@ export class HomePage extends BasePage {
     protected productField = By.xpath('//div[@class="v--modal-box v--modal"]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input');
     protected nextButton = By.xpath('//div[@class="modal-content"]/div[1]/div[2]/button');
     protected categoryButton = By.xpath('//ul[@class="choose-cat mt-md"]/li[2]/button');
+    protected categories = By.xpath('//*[@id="__layout"]/div/header/div/div[1]/div[1]/div[1]/div[3]/ul/li[2]/a');
+    protected automobili = By.xpath('//*[@id="__layout"]/div/div[1]/div/div[2]/div[1]/div/a[1]');
 
     async clickRegButton() {
         await this.findElementAndClick(this.regButton);
@@ -53,5 +55,13 @@ export class HomePage extends BasePage {
 
     async chooseCategory() {
         await this.findElementAndClick(this.categoryButton);
+    }
+
+    async categoriesButton(){
+        await this.findElementAndClick(this.categories);
+    }
+
+    async clickAutomobili(){
+        await this.waitAndClick(this.automobili, 10000);
     }
 }
