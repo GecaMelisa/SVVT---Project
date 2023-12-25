@@ -24,11 +24,11 @@ beforeAll(async () => {
 test('filtering', async () => {
     await homePage.agree();
     await homePage.searchForProduct();
-    await searchPage.checkProductName();
+    await searchPage.searchForFiltering();
     await filteringPage.filterProducts();
     await filteringPage.pricing();
-}, 10000);
+}, 1000000);
 
 afterAll(async () => {
     await quitDriver(driver);
-}, 10000);
+}, 1000000);

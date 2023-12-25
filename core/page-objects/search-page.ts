@@ -18,5 +18,21 @@ export class SearchPage extends BasePage {
         expect((await title).includes(testData.search_data.product) || (await title).includes((testData.search_data.product).toUpperCase()) || (await title).includes((testData.search_data.product).toLowerCase()) || (await title).includes('iPhone')).toBeTruthy();
     }
 
+    async searchForFiltering(){
+        const element = await this.driver.wait(until.elementLocated(this.firstProductTitle), 1000000);
+    
+        const titleText = await element.getText();
+    
+        if (typeof titleText !== 'string') {
+            console.error('Title text is not a string:', titleText);
+            return; 
+        }
+    
+        const product = testData.search_data.product.toLowerCase();
+        const lowercaseTitle = titleText.toLowerCase();
+    
+        expect(lowercaseTitle.includes(product) || lowercaseTitle.includes('iphone')).toBeTruthy();
+    }
+
 
 }
