@@ -38,5 +38,10 @@
 
     "question_data":{
         "question": "Dobar laptop"
+    },
+
+    "profile_data":{
+        "username": "tarikm231",
+        "aktivni_oglasi": "Aktivni"
     }
 }
