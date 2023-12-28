@@ -41,7 +41,10 @@
     },
 
     "profile_data":{
-        "username": "tarikm231",
+        "username": "tarikm231"
+    },
+
+    "my_products":{
         "aktivni_oglasi": "Aktivni"
     }
 }
