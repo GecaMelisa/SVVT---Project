@@ -31,9 +31,10 @@ test('Chating between users', async () => {
     await loginPage.clickLogin();
     await messagePage.clickMessageButton();
     await messagePage.clickTextArea();
+    await messagePage.enterQuestion();
     await messagePage.clickSendMessage();
     
-}, 1000000);
+}, 200000);
 
 afterAll(async () => {
     await quitDriver(driver);

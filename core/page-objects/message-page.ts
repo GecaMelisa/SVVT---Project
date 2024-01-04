@@ -7,25 +7,30 @@ const dataFilePath = path.resolve(__dirname, "../data/data.json");
 const testData = JSON.parse(readFileSync(dataFilePath, "utf8"));
 
 export class MessagePage extends BasePage {
-    private messageButton = By.xpath('//*[@id="__layout"]/div/div[1]/div[2]/div/div/div[2]/div[2]/div[2]/div/div[2]/button[2]');
+    private messageButton = By.xpath('//div[@class="user-contact mt-md w-full flex-row items-center grid grid-cols-2 gap-2"]/button[2]');    
     private textArea = By.className("flex-auto");
-    private sendMessage = By.xpath('//*[@id="modals-container"]/div/div/div[2]/div/div[2]/div/div[2]/div/button[2]');
+    private sendMessage = By.xpath('//div[@class="grid grid-cols-2 gap-4 mt-4"]/button[2]');
    
     constructor(driver: WebDriver) {
         super(driver);
     }
 
     async clickMessageButton(){
-        await this.findElementAndClick(this.messageButton);
+        const element = await this.waitForElement(this.messageButton, 10000)
+        await this.scriptClick(element)
     }
 
     async clickTextArea(){
-         await this.waitAndFillInput(this.textArea, testData.chating_data.message, 1000000);
+        const element = await this.waitForElement(this.textArea, 10000)
+        await this.scriptClick(element)
+    }
+
+    async enterQuestion() {
+        await this.waitAndFillInput(this.textArea, testData.chating_data.message, 1000000);
     }
 
     async clickSendMessage(){
-       await this.findElementAndClick(this.sendMessage);
-       
+
     }
 
 
