@@ -24,6 +24,6 @@ test('search', async () => {
     await searchPage.checkProductName();
 }, 10000);
 
-afterAll(async () => {
-    await quitDriver(driver);
-}, 10000);
+// afterAll(async () => {
+//     await quitDriver(driver);
+// }, 10000);

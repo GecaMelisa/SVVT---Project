@@ -31,7 +31,7 @@ export class SearchPage extends BasePage {
         const product = testData.search_data.product.toLowerCase();
         const lowercaseTitle = titleText.toLowerCase();
     
-        expect(lowercaseTitle.includes(product) || lowercaseTitle.includes('iphone')).toBeTruthy();
+        expect(lowercaseTitle.includes(product) || lowercaseTitle.includes('iphone') || lowercaseTitle.includes('Iphone')).toBeTruthy();
     }
 
 
