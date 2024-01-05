@@ -25,5 +25,9 @@ test('search', async () => {
 }, 10000);
 
 afterAll(async () => {
+<<<<<<< Updated upstream
     await quitDriver(driver);
+=======
+    await quitDriver(driver); 
+>>>>>>> Stashed changes
 }, 10000);
