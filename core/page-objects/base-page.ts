@@ -50,4 +50,8 @@ export default class BasePage {
     async scriptClick(element: WebElement) {
         await this.driver.executeScript('arguments[0].click();', element);
     }
+
+    async scriptInput(element: WebElement, text: string) {
+        await this.driver.executeScript("arguments[0].setAttribute('value', '" + text +"')", element);
+    }
 }

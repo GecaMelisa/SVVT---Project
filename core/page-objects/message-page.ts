@@ -26,14 +26,12 @@ export class MessagePage extends BasePage {
     }
 
     async enterQuestion() {
-        await this.waitAndFillInput(this.textArea, testData.chating_data.message, 1000000);
+        const element = this.waitForElement(this.textArea, 10000);
+        await this.scriptInput(element, 'Message')
     }
 
-    async clickSendMessage(){
-
+    async clickSendMessage() {
+        const element = this.waitForElement(this.sendMessage, 10000);
+        await this.scriptClick(element);
     }
-
-
-
-  
 }

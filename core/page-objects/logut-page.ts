@@ -20,8 +20,6 @@ export class LogoutPage extends BasePage {
 
     async clickLogout(){
         await this.waitAndClick(this.logut, 100000);
-
-
     }
    
 }
